@@ -1,0 +1,82 @@
+<h1>Descripción</h1>
+
+<p>El día de hoy, Karel El Espía tiene una nueva misión. Él debe infiltrarse en la base enemiga para robar toda la información secreta del Maléfico Chuzpa.</p>
+
+<p>Para esto, él necesita descifrar el codigo que desactiva todas las defensas de las instalaciones enemigas.</p>
+
+<p>Él cuenta con un código $S$, conformado por letras minúsculas del abecedario inglés. Este posible código fue secuestrado en alguna de las misiones anteriores, pero pronto se dan cuenta que no es el correcto.</p>
+
+<p>El equipo de Karel tiene capturado a un enemigo que asegura saber descifrar el código robado para generar la verdadera contraseña que desarmara la base enemiga. Como no quiere traicionar tan descaradamente a su bando, él escribe una lista de operaciones que deben ejecutar para obtener la contraseña.</p>
+
+<p>La lista dada cuenta con dos operaciones:</p>
+
+<ul>
+<li><p>Operación $1$. Dado un rango $i$ y $j$, se debe rotar $k$ veces cada caracter de $S$ contenido en el rango. Rotar una letra es llevarla a la siguiente letra en el abecedario. La rotación de <em>z</em> es <em>a</em>.</p></li>
+<li><p>Operación $2$. El primer carácter de $S$ será el siguiente carácter de la contraseña efectiva. Lo siguiente que se debe hacer es eliminar ese carácter de $S$ e insertar una letra <em>a</em> al final de $S$.</p></li>
+</ul>
+
+<p>Ayuda a Karel a decifrar el código de defensa.</p>
+
+<h1>Entrada</h1>
+
+<ul>
+<li>Línea $1$: Dos enteros, $n$ y $Q$. El primero representa el tamaño de el código inicial $S$ y el segundo son el número de operaciones que escribió el prisionero.</li>
+<li>Línea $2$: La cadena de caracteres $S$.</li>
+<li>Líneas $l+2 ... l+Q+1$: El tipo de operación a efectuar ($1$ ó $2$). Si la operación es de tipo $1$ seguirán tres enteros, $i$, $j$ y $k$.</li>
+</ul>
+
+<h1>Salida</h1>
+
+<p>Debes imprimir la contraseña de la base enemiga.</p>
+
+<h1>Ejemplo</h1>
+
+<table class="sample_io"><thead><tr><th>Entrada</th><th>Salida</th><th>Descripción</th></tr></thead><tbody><tr><td><pre>11 6
+dontsolveit
+2
+1 1 11 2
+2
+2
+2
+1 1 1 1</pre></td><td><pre>dqpv</pre></td><td><p>Al principio $S$=dontsolveit</p>
+
+<p>Operación 2-> "d" es el primer carácter en la solución y ahora $S$=ontsolveita</p>
+
+<p>Operación 1-> $S$=qpvuqnxgkvc</p>
+
+<p>Operación 2-> "q" es el siguiente carácter y $S$=pvuqnxgkvca</p>
+
+<p>Operación 2-> "p" es solución y $S$=vuqnxgkvcaa</p>
+
+<p>Operación 2-> "v" es solución y $S$=uqnxgkvcaaa</p>
+
+<p>Operación 1-> $S$=vqnxgkvcaaa</p></td></tr></tbody></table>
+
+<h1>Límites</h1>
+
+<p>Para todos los casos:</p>
+
+<ul>
+<li><p>$1 \leq Q \leq 100,000$</p></li>
+<li><p>$1 \leq i, j \leq n$</p></li>
+<li><p>$k \leq 1,000$</p></li>
+</ul>
+
+<h1>Subtask 1 [20 ptos]</h1>
+
+<ul>
+<li>$1 \leq n \leq 1,000$</li>
+</ul>
+
+<h1>Subtask 2 [40 ptos]</h1>
+
+<ul>
+<li><p>$1 \leq n \leq 100,000$</p></li>
+<li><p>Se asegura que todas las operaciones de tipo $2$ vendrán después de todas las de tipo $1$.</p></li>
+</ul>
+
+<h1>Subtask 3 [40 ptos]</h1>
+
+<ul>
+<li>$1 \leq n \leq 100,000$</li>
+</ul>

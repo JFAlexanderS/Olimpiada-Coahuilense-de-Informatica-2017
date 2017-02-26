@@ -1,0 +1,2 @@
+cases/in/* -diff -delta -merge -text -crlf
+cases/out/* -diff -delta -merge -text -crlf
